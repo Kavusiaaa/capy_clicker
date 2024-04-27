@@ -25,9 +25,10 @@ cpclick = 1
 cps = 0
 upgrade_cost = int(250)
 upgrade_2_cost = 500
-pygame.font.init()
 
+pygame.font.init()
 font = pygame.font.SysFont("Comic Sans MS", 45)
+
 
 text_1 = font.render(f'Coins: {coins}', True, (0, 0, 0))
 text_1_rect = text_1.get_rect()
@@ -53,7 +54,7 @@ def click_per_second():
     while True:
         time.sleep(1)
         coins += cps
-        coins = round(coins)  # Zaokrąglenie wartości coins
+        coins = round(coins)  
         text_1 = font.render(f'Coins: {coins}', True, (0, 0, 0))
         text_1_rect = text_1.get_rect()
         text_1_rect.center = (200, 150)
